@@ -35,7 +35,7 @@ for index,element in enumerate(listUrl):
     if not exists(f'textFiles/{int(listId[index])}.txt'):
         Scrape.scrapeData(int(listId[index]),listUrl[index])
     
-    
+
     data = (Analyze().returnAllAnalysedData(int(listId[index])))
     saveToExcel(int(listId[index]) + 1, data)
 
